@@ -1,0 +1,68 @@
+.task-item {
+	display: flex;
+	flex-direction: column;
+	padding: 10px 14px;
+	border-radius: 5px;
+	background-color: beige;
+	color: #000;
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+	gap: 2rem;
+	width: 100%;
+	position: relative;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+.task-item__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.task-item__title {
+	font-size: 2.6rem;
+}
+.task-item__add-sub {
+	cursor: pointer;
+	border: none;
+	padding: 5px 10px;
+	border-radius: 2px;
+	background-color: rgb(84, 131, 13);
+	color: white;
+	font-size: 16px;
+}
+
+.task-item__subtasks-title {
+	text-align: center;
+	background-color: rgba(127, 255, 212, 0.377);
+	padding: 5px 1rem;
+	font-size: 2rem;
+}
+
+.task-item__subtasks {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+}
+.task-item__subtasks-list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+}
+
+.task-item__delete {
+	background-color: orangered;
+	padding: 5px 10px;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	width: 20%;
+	/* display: none; */
+	position: absolute;
+	top: 100%;
+	left: 0;
+	/* align-self: flex-end; */
+	display: none;
+}
+
+.task-item:hover .task-item__delete {
+	display: block;
+}

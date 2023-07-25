@@ -1,0 +1,55 @@
+.sub-task {
+	display: grid;
+	gap: 1.6rem;
+	grid-template-columns: 30fr 70fr;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid grey;
+	padding-bottom: 0.5rem;
+}
+.sub-task__title {
+	font-size: 2rem;
+	font-weight: bold;
+}
+.sub-task__status-container {
+	display: flex;
+	gap: 0.8rem;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.status-button {
+	display: none;
+}
+.status-button:checked + label {
+	transform: translateY(3.5px);
+	box-shadow: none;
+	border: 1px solid #444;
+}
+.staus-button-label {
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-size: 14px;
+	box-shadow: 0 7px 7px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	color: white;
+}
+
+.staus-button-label--todo {
+	background-color: orangered;
+}
+
+.staus-button-label--in-progress {
+	background-color: orange;
+}
+.staus-button-label--completed {
+	background-color: yellowgreen;
+}
+
+@media screen and (max-width: 430px) {
+	.sub-task {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+}

@@ -1,0 +1,66 @@
+.add-task__title {
+	font-size: 3rem;
+	margin-bottom: 2rem;
+}
+
+.add-task__form {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.form-group label {
+	font-size: 20px;
+}
+
+.form-group input,
+textarea {
+	padding: 8px 16px;
+	border-radius: 5px;
+	border: none;
+	background-color: gainsboro;
+	font-size: 18px;
+}
+
+.add-task__actions {
+	margin-top: 50px;
+	display: flex;
+	gap: 16px;
+	justify-content: flex-end;
+	align-items: center;
+}
+.add-task__action {
+	padding: 20px 30px;
+	border: none;
+	border-radius: 5px;
+	font-size: 20px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.add-task__action--submit {
+	background-color: skyblue;
+}
+
+@media screen and (max-width: 430px) {
+	.form-group label,
+	input,
+	textarea {
+		text-align: center;
+	}
+	.add-task__title {
+		text-align: center;
+	}
+	.add-task__actions {
+		flex-direction: column;
+	}
+	.add-task__action {
+		width: 100%;
+	}
+}

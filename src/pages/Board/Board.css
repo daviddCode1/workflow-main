@@ -1,0 +1,100 @@
+.board {
+}
+.board__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 35px 15px;
+}
+.board__title {
+}
+.board__add-task {
+	border: none;
+	background-color: grey;
+	color: #fff;
+	font-size: 2rem;
+	border-radius: 5px;
+	cursor: pointer;
+	opacity: 0.7;
+	transition: all 0.3s;
+	padding: 8px 1.6rem;
+}
+.board__add-task:hover {
+	opacity: 1;
+}
+.board__title {
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 500;
+	font-size: 6rem;
+}
+
+.board__sections {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	height: 100%;
+	width: 100%;
+}
+.board-section {
+	padding: 2rem 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 7rem;
+}
+.board-section__tasks {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.board__sections div {
+	width: 100%;
+	height: 100%;
+}
+.board__todo {
+}
+.board__progress {
+}
+.board__completed {
+}
+
+.board-section__title {
+	padding: 1rem 2rem;
+	border-radius: 5px;
+	text-transform: capitalize;
+	font-size: 2.5rem;
+	color: #fff;
+	text-transform: uppercase;
+}
+.board-section__title--todo {
+	background-color: orangered;
+}
+
+.board-section__title--in-progress {
+	background-color: orange;
+}
+
+.board-section__title--completed {
+	background-color: greenyellow;
+}
+.board__actions {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.board__add-task--reset {
+	background-color: skyblue;
+}
+@media screen and (max-width: 768px) {
+	.board__header {
+		flex-direction: column;
+		gap: 16px;
+	}
+	.board__add-task {
+		width: 100%;
+	}
+	.board__sections {
+		flex-direction: column;
+		gap: auto;
+	}
+}

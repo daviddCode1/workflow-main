@@ -1,0 +1,26 @@
+.modal {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 10000;
+}
+
+.modal__content {
+	width: 65rem;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 1.6rem 2.4rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 430px) {
+	.modal__content {
+		width: 40rem;
+	}
+}
