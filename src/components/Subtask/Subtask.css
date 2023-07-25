@@ -13,6 +13,7 @@
 }
 .sub-task__status-container {
 	display: flex;
+	flex-grow: inherit;
 	gap: 0.8rem;
 	justify-content: space-between;
 	align-items: center;
@@ -24,7 +25,7 @@
 .status-button:checked + label {
 	transform: translateY(3.5px);
 	box-shadow: none;
-	border: 1px solid #444;
+	border: 2px solid #444;
 }
 .staus-button-label {
 	padding: 5px 10px;
@@ -46,6 +47,7 @@
 	background-color: yellowgreen;
 }
 
+/* allows for mobile responsiveness */
 @media screen and (max-width: 430px) {
 	.sub-task {
 		display: flex;

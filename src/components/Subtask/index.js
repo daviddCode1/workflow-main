@@ -33,7 +33,7 @@ const Index = ({ subTask, onToggle }) => {
 					htmlFor={`in-progress-${subTask.id}`}
 					className='staus-button-label staus-button-label--in-progress'
 				>
-					In Progress
+					In-progress
 				</label>
 				<input
 					type='radio'

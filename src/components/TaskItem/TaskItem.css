@@ -18,7 +18,7 @@
 	align-items: center;
 }
 .task-item__title {
-	font-size: 2.6rem;
+	font-size: 2rem;
 }
 .task-item__add-sub {
 	cursor: pointer;
@@ -32,15 +32,19 @@
 
 .task-item__subtasks-title {
 	text-align: center;
-	background-color: rgba(127, 255, 212, 0.377);
+	background-color: rgba(236, 240, 241);
 	padding: 5px 1rem;
 	font-size: 2rem;
+	border-radius: 20px;
+	font-family:'Courier New', Courier, monospace;
 }
 
 .task-item__subtasks {
 	display: flex;
 	flex-direction: column;
 	gap: 2.5rem;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 1.3rem;
 }
 .task-item__subtasks-list {
 	display: flex;

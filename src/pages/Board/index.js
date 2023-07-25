@@ -16,6 +16,7 @@ const Board = () => {
 		setSubTaskCreate(false);
 	};
 
+	// debugging utility - visualize the values of subTaskId, status, and taskId
 	const handleToggleSubStatus = (subTaskId, status, taskId) => {
 		console.log({
 			subTaskId,
@@ -69,7 +70,6 @@ const Board = () => {
 			});
 
 			// save to into localStorage
-
 			localStorage.setItem('tasks', JSON.stringify(updatedTasks));
 			setTasks((prev) => [...updatedTasks]);
 		} else {
@@ -104,6 +104,7 @@ const Board = () => {
 		localStorage.clear();
 		setTasks([]);
 	};
+	
 	useEffect(() => {
 		if (localStorage.getItem('tasks')) {
 			const storedTasks = JSON.parse(localStorage.getItem('tasks'));
@@ -160,7 +161,7 @@ const Board = () => {
 					</div>
 					<div className='board-section board__progress'>
 						<h2 className='board-section__title board-section__title--in-progress'>
-							In Progess
+							In Progress
 						</h2>
 
 						<div className='board-section__tasks'>

@@ -88,7 +88,7 @@
 	background-color: skyblue;
 }
 
-/* allows for mobile responsiveness */
+/* allows for mobile responsive */
 @media screen and (max-width: 768px) {
 	.board__header {
 		flex-direction: column;
