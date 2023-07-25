@@ -24,9 +24,9 @@
 }
 .board__title {
 	text-transform: uppercase;
-	color: #fff;
+	color: black;
 	font-weight: 500;
-	font-size: 6rem;
+	font-size: 4rem;
 }
 
 .board__sections {
@@ -63,19 +63,21 @@
 	border-radius: 5px;
 	text-transform: capitalize;
 	font-size: 2.5rem;
-	color: #fff;
+	color: black;
 	text-transform: uppercase;
+	border: solid;
+	font-family: 'Courier New', Courier, monospace;
 }
 .board-section__title--todo {
-	background-color: orangered;
+	border-color: orangered;
 }
 
 .board-section__title--in-progress {
-	background-color: orange;
+	border-color: orange;
 }
 
 .board-section__title--completed {
-	background-color: greenyellow;
+	border-color: greenyellow;
 }
 .board__actions {
 	display: flex;
@@ -85,6 +87,8 @@
 .board__add-task--reset {
 	background-color: skyblue;
 }
+
+/* allows for mobile responsiveness */
 @media screen and (max-width: 768px) {
 	.board__header {
 		flex-direction: column;

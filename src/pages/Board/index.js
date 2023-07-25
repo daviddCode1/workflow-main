@@ -32,16 +32,19 @@ const Board = () => {
 			status
 		);
 
-		// also check the status of Task itself - if one subtask "in-progress" move task to in-progress
+		// also check the status of Task itself
 		const updatedWithTaskStatus = updatedTasks.map((task) => {
 			if (task.id === taskId) {
+				// if one subtask "in-progress" move task to in-progress
 				if (task.subTasks.some((subTask) => subTask.status === 'in-progress')) {
 					task.status = 'in-progress';
 				} else if (
+				// if all subtasks "completed" move task to completed
 					task.subTasks.every((subTask) => subTask.status === 'completed')
 				) {
 					task.status = 'completed';
 				} else if (
+				// if only some subtasks are completed
 					task.subTasks.some((subTask) => subTask.status === 'completed')
 				) {
 					task.status = 'in-progress';
@@ -89,11 +92,14 @@ const Board = () => {
 		setOpenModal(true);
 	};
 
+	// function to delete an individual task (targets task id & removes from local storage)
 	const handleDeleteTask = (idOfTask) => {
 		const filteredTasks = tasks.filter((task) => task.id !== idOfTask);
 		localStorage.setItem('tasks', JSON.stringify(filteredTasks));
 		setTasks((prev) => [...filteredTasks]);
 	};
+
+	// function to reset/clear local storage
 	const handleReset = () => {
 		localStorage.clear();
 		setTasks([]);
@@ -119,7 +125,7 @@ const Board = () => {
 					''
 				)}
 				<div className='board__header'>
-					<h1 className='board__title'>WORK FLOW</h1>
+					<h1 className='board__title'>Workflow Manager</h1>
 					<div className='board__actions'>
 						<button className='board__add-task' onClick={handleClick}>
 							+ Add Task
@@ -136,7 +142,7 @@ const Board = () => {
 				<div className='board__sections'>
 					<div className='board-section board__todo'>
 						<h2 className='board-section__title board-section__title--todo'>
-							Todo
+							Backlog
 						</h2>
 						<div className='board-section__tasks'>
 							{tasks

@@ -10,6 +10,7 @@ const Index = ({ onTask, onCancel, subTask }) => {
 		e.preventDefault();
 
 		let task2BCreated = null;
+		// object stored if subtask is true 
 		if (subTask) {
 			task2BCreated = {
 				id: idGenerator(),
@@ -18,6 +19,7 @@ const Index = ({ onTask, onCancel, subTask }) => {
 				status: 'todo',
 			};
 		} else {
+		// if not subtask - task created with following properties inclu subtasks array
 			task2BCreated = {
 				id: idGenerator(),
 				title: title,

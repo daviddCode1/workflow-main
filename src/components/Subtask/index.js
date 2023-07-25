@@ -2,6 +2,8 @@ import React from 'react';
 import './Subtask.css';
 const Index = ({ subTask, onToggle }) => {
 	return (
+		// subtask 3 statuses (backlog, in-progress, completed) 
+		// subtasks status dynamically determine task status
 		<li className='sub-task'>
 			<span className='sub-task__title'>{subTask.title}</span>
 			<div className='sub-task__status-container'>
