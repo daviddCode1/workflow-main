@@ -114,6 +114,7 @@ const Board = () => {
 	return (
 		<section className='board'>
 			<div className='container'>
+				
 				{openModal === true ? (
 					<Modal onCloseModal={(e) => setOpenModal(false)}>
 						<AddTask
